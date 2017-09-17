@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Drone Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head> 
+
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Drone Search</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Restart</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- TITLE -->
+    <div class="container-fluid text-center bg-1">
+      <div style="background:transparent !important" class="jumbotron">
+        <h1>Drone Search</h1>
+        <p>Search and produce visualizations based on US drone strike data</p>
+        <div class="container" id="hoverPic">
+          <img src="images/drone.jpeg" class="img-responsive margin" alt="Image" align="middle">
+          <div class="middle">
+            <div class="text">
+              <a href="http://api.dronestre.am/"> Click here for more info about the data used </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIRST CONTAINER -->
+    <div class="container-fluid bg-5">
+
+      <!-- FORM DIV -->
+      <div class="col-sm-6 col-sm-offset-3 text-center container bg-2">
+
+        <!-- FORM -->              <!-- action = the url where we want to POST -->
+        <form name="myForm" id="myForm" action="http://localhost:5000/users" method="POST">
+
+            <!-- NAME -->
+            <div id="name-group" class="form-group">
+                <label for="name">Search Date:</label>
+                <input type="text" class="form-control" name="name" placeholder="boom">
+            </div>
+
+            <button id="submit-button" class="btn btn-success">Submit <span class="fa fa-arrow-right"></span></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- SECOND CONTAINER  -->
+    <div class="container-fluid bg-4 text-center">    
+      <h3 class="margin">Map</h3><br>
+      <div class="row">
+        
+      </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="container-fluid bg-3 text-center">
+      <p>Sample site footer</p> 
+    </footer>
+  </body>
+
+  <script>
+    // POST
+    $(document).ready(function() {
+
+      //callback handler for form submit
+      $('#myForm').submit(function(event) {
+
+        // stop default action
+        event.preventDefault();
+
+        // get the form data
+        var formData = $(this).serializeArray();
+        var formURL = $(this).attr("action");
+
+        // process the form
+        $.ajax({
+          type        : 'POST',
+          url         : formURL, 
+          data        : formData,
+          dataType    : 'json',
+          encode      : true,
+          success: function(data) {
+            console.log(data);
+            console.log('process sucess');
+          },
+          error: function() {
+            console.log('process error');
+          },
+        })
+      });
+
+      //Submit  the FORM
+      $("form").submit(function(){ 
+        alert("Submitted");
+      });
+    });
+  </script>
+</html>
+
+
+
