@@ -1,5 +1,5 @@
-# Sample-site
-Basic starter site for future projects
+# US Drone Strike Search App
+Drone Search generates D3 visualizations based on user input. More information about the data and/or specific strikes is available.
 ## Installation
 Either download this repository as a zip or clone it.
 ## Contributing
