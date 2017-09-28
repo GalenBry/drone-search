@@ -39,7 +39,7 @@ p {font-size: 16px;}
     padding-bottom: 70px;
 }
 
-img {
+#preHoverPic {
   opacity: 1;
   display: block;
   width: 40%;
@@ -65,10 +65,11 @@ img {
   opacity: 1;
 }
 
-.text {
-  background-color: #4CAF50;
+#hoverText {
+  background-color: #1abc9c;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+  text-decoration: none;
 }
 
