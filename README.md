@@ -11,6 +11,10 @@ Either download this repository as a zip or clone it.
 * Open your terminal and enter `npm init`
 * To start the server enter `npm start`
 * Open a browser and enter [http://localhost:5000](http://localhost:5000)
+* To scrape a web page:
+	* Change the url in `server.js`
+	* Open a browser and enter [http://localhost:5000/scrape](http://localhost:5000/scrape)
+	* File named `output.json` will be added to project folder
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`

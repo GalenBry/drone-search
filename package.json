@@ -5,9 +5,13 @@
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.15.3",
+    "fs": "0.0.1-security",
     "mongod": "^2.0.0",
-    "mongodb": "^2.2.31"
+    "mongodb": "^2.2.31",
+    "prettyjson": "^1.2.1",
+    "request": "^2.83.0"
   },
   "devDependencies": {},
   "scripts": {
