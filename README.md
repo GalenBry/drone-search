@@ -2,6 +2,15 @@
 Drone Search generates D3 visualizations based on user input. More information about the data and/or specific strikes is available.
 ## Installation
 Either download this repository as a zip or clone it.
+* To clone this repoitory:
+  * Open your terminal
+  * Install Git(if you haven't already)
+  * Enter `git clone https://github.com/philipbankier/drone-search.git` 
+## Usage
+* Navigate to project directory
+* Open your terminal and enter `npm init`
+* To start the server enter `npm start`
+* Open a browser and enter [http://localhost:5000](http://localhost:5000)
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
