@@ -40,5 +40,14 @@ var jMap = $(".map"),
             .data( topojson.feature( worldJson, worldJson.objects.countries ).features )
             .enter().append( 'path' )
             .attr( 'class', 'land' )
-            .attr( 'd', path );
+            .attr( 'd', path )
+            .on('click', function(d) {
+              d3.select(this).classed("selected", true)
+            })
+            .on('mouseover', function(d) {
+              d3.select(this).classed("hovered", true)
+            })
+            .on('mouseout', function(d) {
+              d3.select(this).classed("hovered", false)
+            });
       });

@@ -94,4 +94,9 @@ p {font-size: 16px;}
   stroke: #000000;
   stroke-width: 0.5px;
 }
-
+.selected {
+  fill: #FF4C3B; /*red*/
+}
+.hovered {
+  fill: #FFD034; /*yellow*/
+}
