@@ -15,6 +15,10 @@ Either download this repository as a zip or clone it.
 	* Change the url in `server.js`
 	* Open a browser and enter [http://localhost:5000/scrape](http://localhost:5000/scrape)
 	* File named `output.json` will be added to project folder
+## Current Dev
+* Parsing json for incident details, like location, summary, etc
+* Add option of making list or choosing one country on the map
+* Restyle the site, make it less boxy
 ## Contributing
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`

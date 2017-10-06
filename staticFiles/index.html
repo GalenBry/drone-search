@@ -37,7 +37,12 @@
           <a class="navbar-brand" href="#">Drone Search</a>
         </div>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Restart</a></li>
+          <!-- Restart -->
+          <!-- <li class="active">
+            <form name="restartPage" id="restartPage" action="http://localhost:5000/restart" method="POST">
+              <button id="restart-button" class="btn btn-success">Restart<span class="fa fa-arrow-right"></span></button>
+            </form>        
+          </li> -->
         </ul>
       </div>
     </nav>
@@ -130,6 +135,40 @@
       });
     });
   </script>
+
+  <!-- restart button -->
+  <!-- <script>
+    // POST
+    $(document).ready(function() {
+
+      //callback handler for form submit
+      $('#restartPage').submit(function(event) {
+
+        // stop default action
+        event.preventDefault();
+
+        
+
+        // process the form
+        $.ajax({
+          type        : 'POST',
+          encode      : true,
+          success: function(data) {
+            console.log(data);
+            console.log('process sucess');
+          },
+          error: function() {
+            console.log('process error');
+          },
+        })
+      });
+
+      //Submit  the FORM
+      $("form").submit(function(){ 
+        alert("Submitted");
+      });
+    });
+  </script> -->
 </html>
 
 

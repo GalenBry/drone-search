@@ -20,7 +20,8 @@ var jMap = $(".map"),
           
         return projection;
       },
-          
+
+
       mercatorBounds = function(projection) {
         // find the top left and bottom right of current projection
         var maxlat = 83,
@@ -42,7 +43,8 @@ var jMap = $(".map"),
             .attr( 'class', 'land' )
             .attr( 'd', path )
             .on('click', function(d) {
-              d3.select(this).classed("selected", true)
+              d3.select(".selected").attr("class", "land");
+              d3.select(this).attr("class", "selected");
             })
             .on('mouseover', function(d) {
               d3.select(this).classed("hovered", true)

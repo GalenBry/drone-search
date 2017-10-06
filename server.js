@@ -29,9 +29,13 @@ app.get('/', function(req, res) {
 
 app.post('/users', function(req, res) {
   console.log(req.body); 
-  console.log("TEST")
  res.send(req.body);
 });
+
+// app.post('/restart', function(req, res) {
+//   console.log("TEST")
+//  res.send(req.body);
+// });
 
 // WEB SCRAPER
 app.get('/scrape', function(req, res){
